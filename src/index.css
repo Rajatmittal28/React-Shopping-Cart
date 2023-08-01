@@ -1,13 +1,122 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+      'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+      'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 20px;
+  background: whitesmoke;
+}
+img {
+  height: 80px;
+}
+.card {
+  background: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+.productsWrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+.btn {
+  border: none;
+  outline: none;
+  background: #764abc;
+  padding: 5px 10px;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.btn:hover {
+  background: #513282;
+}
+
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+}
+
+.heading {
+  padding: 15px 0;
+  text-align: center;
+}
+
+.cartCount {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: 40px;
+}
+
+.navLink {
+  text-decoration: none;
+  color: black;
+  margin-left: 20px;
+}
+
+.cartCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  margin-bottom: 20px;
+  padding: 14px;
+  border-radius: 5px;
+}
+
+.cart-image {
+  width: 10%;
+  height: 100%;
+}
+
+.cartCard h5 {
+  width: 30%;
+  height: 100%;
+  margin: 0px 20px;
+}
+
+.btns {
+  display: flex;
+  gap: 20px;
+  position: relative;
+  right: 200px;
+}
+
+.btns .btn {
+  height: 30px;
+  margin-top: 13px;
+}
+
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 10px solid #f3f3f3; /* Light grey */
+  border-top: 10px solid #383636; /* Black */
+  border-radius: 50%;
+  animation: spinner 1.5s linear infinite;
 }
